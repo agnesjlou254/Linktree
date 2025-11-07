@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharing Music Video</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .profile {
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .profile-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-button {
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            animation: fadeInUp 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-button:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .link-button:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .link-button:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .link-button:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .link-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .link-button:hover::before {
+            left: 0;
+        }
+
+        .link-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .link-button:active {
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .song-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .artist {
+            font-size: 14px;
+            font-weight: normal;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .link-button {
+                font-size: 16px;
+                padding: 16px 25px;
+            }
+
+            .profile-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
+            }
+
+            .artist {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="profile-icon">🎵</div>
+            <h1>Sharing Music Video</h1>
+        </div>
+        
+        <div class="links">
+            <a href="https://youtu.be/aSugSGCC12I?si=YjRX3-9MHxnF6vav" class="link-button" target="_blank">
+                <span class="icon">▶️</span>
+                <div class="song-title">
+                    <span>Manchild</span>
+                    <span class="artist">Sabrina Carpenter</span>
+                </div>
+            </a>
+            
+            <a href="https://youtu.be/c8zq4kAn_O0?si=JvTA7xKyhRwkzx2B" class="link-button" target="_blank">
+                <span class="icon">▶️</span>
+                <div class="song-title">
+                    <span>Back to Friends</span>
+                    <span class="artist">Sombr</span>
+                </div>
+            </a>
+            
+            <a href="https://youtu.be/BBpIV9A1PXc?si=IKsdOnGxg5mpNFzG" class="link-button" target="_blank">
+                <span class="icon">▶️</span>
+                <div class="song-title">
+                    <span>Backburner</span>
+                    <span class="artist">NIKI</span>
+                </div>
+            </a>
+            
+            <a href="https://youtu.be/9bAPa7dCdBs?si=R2mWGn1-1MaqKaK-" class="link-button" target="_blank">
+                <span class="icon">▶️</span>
+                <div class="song-title">
+                    <span>Delusional</span>
+                    <span class="artist">John Michael Howell</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
